@@ -43,13 +43,11 @@ code {
 <body>
 <h1>Welcome To my blog</h1>
 <?php
-foreach($articles as $article)
-{
-?>
-<h3><?php echo $article->title; ?></h3>
-By <strong><?php echo $article->author; ?></strong>
-<?php
-}
-?>
+foreach($blogs as $blog)
+{?>
+	<h3><?php echo $blog->getTitle(); ?></h3>
+	By <strong><?php echo $blog->getAuthor(); ?></strong>
+	<p><?php echo $blog->getContent(); ?></p>
+<?php } ?>
 </body>
 </html>
