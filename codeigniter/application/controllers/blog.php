@@ -16,6 +16,11 @@ class Blog extends CI_Controller {
 	*/
 	public function index()
 	{
+		/*
+		*TODO: When you pass the view an array, it gets an array
+		*this need to be converted to use the model class
+		*the view currently is set to work only for the model object
+		*/
 		$this->load->model("blog_model");
 		$articles = $this->blog_model->get_articles_list();
 		$data["articles"] = $articles;
